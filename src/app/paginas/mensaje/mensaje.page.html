@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>mensaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let mensaje of mensajes" >
+    <ion-label>{{mensaje.mensaje}}</ion-label> 
+  </ion-item>
+</ion-content>

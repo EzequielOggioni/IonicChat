@@ -22,6 +22,10 @@ const routes: Routes = [
     path: '',
     loadChildren:() => import('./paginas/login/login.module').then ( m=> m.LoginPageModule )
     
+  },
+  {
+    path: 'mensajes/:id',
+    loadChildren: () => import('./paginas/mensaje/mensaje.module').then( m => m.MensajePageModule)
   }
 ];
 
