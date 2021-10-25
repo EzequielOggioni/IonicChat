@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Usuario } from '../Clase/usuario';
 
 export interface Message {
   fromName: string;
@@ -12,6 +13,9 @@ export interface Message {
   providedIn: 'root'
 })
 export class DataService {
+
+  public usuario!:Usuario;
+
   public messages: Message[] = [
     {
       fromName: 'Matt Chorsey',
