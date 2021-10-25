@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label>Usuario</ion-label>
+    <ion-input type="text" name="usuario" [(ngModel)]="usuario.usuario"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Contraseña</ion-label>
+    <ion-input type="password" name="pass" [(ngModel)]="usuario.pass"></ion-input>
+  </ion-item>
+  <div *ngIf="!nuevo()">
+    <ion-item>
+      <ion-button color="primary" (click)="registro=true">Registrar</ion-button>
+      <ion-button color="Success" (click)="loguear()">Aceptar</ion-button>
+    </ion-item>
+  </div>
+  <div *ngIf="nuevo()">
+    <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input type="text" name="nombre" [(ngModel)]="usuario.nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Apellido</ion-label>
+    <ion-input type="text" name="Apellido" [(ngModel)]="usuario.Apellido"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button color="primary" (click)="registro=false">Cancelar</ion-button>
+    <ion-button color="Success" (click)="loguear()">Aceptar</ion-button>
+  </ion-item>
+  </div>
+</ion-content>
